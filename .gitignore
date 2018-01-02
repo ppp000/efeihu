@@ -1,6 +1,6 @@
-﻿#过滤根目录下的文件夹
+﻿#过滤根目录下的node_modules文件夹
 /node_modules/
-/doc/
+
 
 
 #过滤文件
