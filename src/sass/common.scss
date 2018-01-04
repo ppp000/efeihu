@@ -1,3 +1,210 @@
-.clearfix{
-    
+/*
+    公共样式
+*/
+
+//头部
+.div1{
+    min-width:1200px;
+    height: 30px;
+    font-size:12px;
+    color:#555;
+    border-bottom:1px solid #ccc;
+    background: linear-gradient(180deg,#fff, #eee);
+    // background:url("../css/img/spirit.fw.png") repeat-x 0 0;
+    .div1_l{
+        text-align:center;
+        height: 30px;
+        line-height: 30px;
+        span{
+            display:inline-block;   
+            margin:0px 4px;
+        }
+        a{
+            display:inline-block;
+        }
+    }
+    .div1_r{
+        @extend .div1_l;
+        position: relative;
+        >ul{
+            position: relative;
+            >li{
+                width: 77px;
+                float: left;
+                >i{
+                    display: block;
+                    width: 13px;
+                    height: 10px;
+                    background: url("../css/img/spirit.fw.png") no-repeat 0 0;
+                    left:64px;
+                    top:10px;
+                    position: absolute; 
+                }
+                >ul{
+                    display:none;
+                }
+            }
+            .div1_li1:hover{
+                background: #fff;
+                .div1_ul1{
+                    display:block;
+                }
+            }
+            .div1_li2:hover{
+                background: #fff;
+                .div1_ul2{
+                    display:block;
+                }
+            }
+            >li:last-child{
+                width: 106px;
+                i{
+                    display:block;
+                    width: 13px;
+                    height: 10px;
+                    background: url("../css/img/spirit.fw.png") no-repeat -13px 0;
+                    left:228px;
+                    top:10px;
+                    position: absolute; 
+                }
+            }
+        }
+    }
+}
+
+//购物车、列表页、详情页尾部
+.div13{
+    height: 271px;
+    width: 981px;
+    background: #fff;
+    padding-top:101px;
+    margin:0 auto;
+    .div13_ul1{
+        padding-top:10px;
+        float: left;
+        width: 273px;
+        height: 149px;
+        li{
+            font-size:12px;
+            color:#999;
+        }
+        li:nth-child(1),li:nth-child(2){
+            padding-left:27px;
+            height: 34px;
+            line-height: 34px;
+            span{
+                font-size:14px;
+                color:#333;
+            }
+        }
+        li:nth-child(3),li:nth-child(4){
+            padding-left:102px;
+            height: 48px;
+            line-height: 48px;
+            span{
+                color:#FF6600;
+            }
+        }
+        li:nth-child(4){
+            line-height:6px; 
+        }
+    }
+    .div14_ul2{
+        float: left;
+        height: 149px;
+        width: 140px;
+        padding-left:16px;
+        border-left:1px solid #ccc;
+        li{
+            font-size:12px;
+            color:#ccc;
+            height: 20px;
+            line-height: 20px;
+        }
+        li:first-child{
+            font-size:14px;
+            color:#333;
+            margin-bottom:5px;
+        }
+    }
+}
+.div14{
+    @extend .div13;
+    height: 129px;
+    padding-top:19px;
+    position: relative;
+    li{
+        font-size:12px;
+        height: 24px;
+        line-height: 24px;
+        color:#ccc;
+        .div14_span{
+            padding-right:5px;
+            height: 13px;
+            line-height: 13px;
+            display:inline-block;
+            border-right:1px solid #ccc;
+        }
+    }
+    li:first-child{
+        color:#333;
+        span{
+            width: 69px;
+            display:inline-block;
+        }
+    }
+    i{
+        display:block;
+        width: 50px;
+        height: 55px;
+        background: url("../css/img/spirit.fw.png") no-repeat -150px -70px;
+        right:0;
+        bottom:40px;
+        position: absolute;
+    }
+}
+
+//注册、登录页尾部
+.footer{
+    width: 981px;
+    background: #fff;
+    margin:0 auto;
+    height: 129px;
+    padding-top:6px;
+    position: relative;
+    border-top:1px solid #ccc;
+    li{
+        font-size:12px;
+        height: 18px;
+        line-height: 18px;
+        color:#777;
+        .div14_span{
+            padding-right:5px;
+            height: 13px;
+            line-height: 13px;
+            display:inline-block;
+            border-right:1px solid #ccc;
+        }
+    }
+    li:first-child{
+        color:#0066FF;
+        span{
+            width: 60px;
+            display:inline-block;
+            border-right:1px solid #ccc;
+            text-align:center;
+        }
+        span:last-child{
+            border:none;
+        }
+    }
+    i{
+        display:block;
+        width: 60px;
+        height: 70px;
+        background: url("../css/img/spirit.fw.png") no-repeat -215px -70px;
+        right:0;
+        bottom:56px;
+        position: absolute;
+    }
 }

@@ -49,6 +49,22 @@
   display: none;
 }
 
+.div1 .div1_r > ul .div1_li1:hover {
+  background: #fff;
+}
+
+.div1 .div1_r > ul .div1_li1:hover .div1_ul1 {
+  display: block;
+}
+
+.div1 .div1_r > ul .div1_li2:hover {
+  background: #fff;
+}
+
+.div1 .div1_r > ul .div1_li2:hover .div1_ul2 {
+  display: block;
+}
+
 .div1 .div1_r > ul > li:last-child {
   width: 106px;
 }

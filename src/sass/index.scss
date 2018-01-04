@@ -39,6 +39,18 @@
                     display:none;
                 }
             }
+            .div1_li1:hover{
+                background: #fff;
+                .div1_ul1{
+                    display:block;
+                }
+            }
+            .div1_li2:hover{
+                background: #fff;
+                .div1_ul2{
+                    display:block;
+                }
+            }
             >li:last-child{
                 width: 106px;
                 i{

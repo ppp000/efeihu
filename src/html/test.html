@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>test</title>
+</head>
+<body>
+    <div>ppp</div>
+    <div class="area"></div>
+    <div>000</div>
+    <script type="text/javascript" src="../lib/jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".area").load("../index.html .div1", function() {
+                alert("Load was performed.");
+            });
+        })
+    </script>
+</body>
+</html>
