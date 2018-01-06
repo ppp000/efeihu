@@ -1,3 +1,553 @@
-.div1{
-    
+.div2{
+    min-width:1200px;
+    height: 100px;
+    position: relative;
+    a{
+        margin:16px 29px 0 5px;
+        background:url('../img/logo.png') no-repeat;
+        width: 300px;
+        height: 68px;
+        display:block;
+    }
+    .div2_box{
+        width: 521px;
+        height: 40px;
+        border: solid 5px #E9E9E9;
+        position: relative;
+        left:329px;
+        top:23px;
+        input{
+            width: 441px;
+            height: 30px;
+            border:solid 1px #C7012C;
+            position: absolute;
+            left:0px;
+        }
+        button{
+            height: 30px;
+            width: 80px;
+            background: #C7012C;
+            font-weight:bold;
+            color:#fff;
+            border:none;
+            position: absolute;
+            left:431px;
+            font-size:16px;
+        }
+    }
+}
+
+.div3{
+    min-width:1200px;
+    .container{
+        height: 40px;
+        background: #C7012C;
+        border-radius:3px;
+    }
+    .div3_l{
+        color:#fff;
+        font-size:16px;
+        letter-spacing: 1px;
+        line-height: 40px;
+        >ul{
+            >li{
+                float: left;
+                text-align:center;
+                position: relative;
+                height: 40px;
+                line-height: 40px;
+                >span{
+                    display:block;
+                    float: left;
+                    height: 16px;
+                    padding:0 20px;
+                    margin-top:10px;
+                    line-height: 16px;
+                    border-right:1px solid #fff;
+                    >i{
+                        display:block;
+                        width: 21px;
+                        height: 23px;
+                        background: url("../css/img/spirit.fw.png") no-repeat -200px 0;
+                        position: absolute;
+                        left:87px;
+                        top:-7px;
+                    }
+                }
+                .div3_span{
+                    border:none;
+                }
+            }
+            >li:first-child{
+                width: 228px;
+                padding-left:26px;
+                text-align:left;
+                position: relative;
+                z-index:100;
+                >ul{
+                    position: absolute;
+                    left:0px;
+                    border:1px solid #C7022D;
+                    border-top:none;
+                    border-right:none;
+                    display:none;
+                    >li{
+                        font-size:16px;
+                        color:#222;
+                        width: 231px;
+                        height: 46px;
+                        background: #FFEFE0;
+                        padding-left:23px;
+                        border-bottom:1px solid #F8D4BC;
+                        border-right:1px solid #C7022D;
+                        position: relative;
+                        >ul{
+                            position: absolute;
+                            left:231px;
+                            top:0px;
+                            background: #fff;
+                            width: 508px;
+                            height: 200px;
+                            display:none;
+                            >li{
+                                float: left;
+                                height: 64px;
+                                line-height: 64px;
+                                color:#333;
+                                padding-left:22px;
+                                font-size:12px;
+                            }
+                        }
+                        >i{
+                            display:block;
+                            width: 15px;
+                            height: 15px;
+                            background: url("../css/img/spirit.fw.png") no-repeat -230px 0;
+                            position: absolute;
+                            right:21px;
+                            top:13px;
+                        }
+                    }
+                }
+                >i{
+                    display:block;
+                    width: 20px;
+                    height: 20px;
+                    background: url("../css/img/spirit.fw.png") no-repeat -160px 0;
+                    position: absolute;
+                    left:185px;
+                    top:10px;
+                }
+            }
+            >li:hover{
+                >ul{
+                    display:block;
+                    >li:hover{
+                        background: #fff;  
+                        border-left:2px solid #C7022D;
+                        border-bottom:2px solid #C7022D;
+                        border-right:none;
+                        >ul{
+                            border:2px solid #C7022D;
+                            border-left:none;
+                            display:block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .div3_r{
+        font-size:12px;
+        float: right;
+        width: 216px;
+        height: 40px;
+        margin-top:7px;
+        position: relative;
+        .div3_p{
+            display:inline-block;
+            height: 24px;
+            line-height: 24px;
+            width: 122px;
+            background: #FFEFE0;
+            border-radius:3px 0 0 3px;
+            padding-left:40px;
+            >i{
+                display:block;
+                width: 20px;
+                height: 20px;
+                background: url("../css/img/spirit.fw.png") no-repeat -40px 0;
+                left:8px;
+                top:2px;
+                position: absolute; 
+            }
+        }
+        a{
+            @extend .div3_p;
+            width: 68px;
+            padding-left:0;
+            text-align:center;
+            background: #FFDE00;
+            margin-right:20px;
+            border-radius:0 3px 3px 0;
+            position: absolute;
+            top:0px;
+            color:#fff;
+        }
+    }
+}
+
+.div4{
+    min-width:1200px;
+    height: 41px;
+    padding-top:20px;
+    font-size:12px;
+    .container{
+        border-bottom:1px solid #ccc;
+        height: 21px;
+        a,span{
+            display:inline-block;
+            padding-left:11px;
+            color:#666666;
+        }
+    }
+}
+
+.main{
+    height: 2463px;
+    min-width:1200px;
+    padding-top:11px;
+    font-size:12px;
+    color:#666;
+    .container{}
+    .left{
+        width: 231px;
+        height: 2453px;
+        background: #eee;
+        .left1{
+            width: 231px;
+            height: 117px;
+            border:5px solid #f1f1f1;
+            .left11{
+                height: 105px;
+                border:1px solid #ddd;
+                background: #F8F8F8;
+                >p{
+                    height: 52px;
+                    line-height: 52px;
+                    font-size:16px;
+                    padding-left:10px;
+                }
+            }
+        }
+    }
+    .right{
+        width: 960px;
+        height: 2453px;
+        .right1{
+            height: 147px;
+            border-top:2px solid #C6002C;
+            border-bottom:2px solid #C6002C;
+            .right11{
+                height: 40px;
+                background: #F1F1F1;
+                padding-left:16px;
+                line-height: 40px;
+                font-size:16px;
+                color:#C7012C;
+            }
+            .right12{
+                height: 43px;
+                padding-top:13px;
+                border-bottom:1px dashed #ccc;
+                >span{
+                    margin-left:23px;
+                    padding:0 4px;
+                    display:inline-block;
+                    height: 18px;
+                    line-height: 18px;
+                }
+            }
+            .right13{
+                padding:13px 0 0 23px;
+            }
+        }
+        .right2{
+            height: 78px;
+            position: relative;
+            background: #fff;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            border-top:2px solid #C90933;
+            >span{
+                height: 41px;
+                line-height: 41px;
+                width: 72px;
+                display:block;
+                float: left;
+                text-align:left;
+                padding-left:16px;
+                background:#F7F7F7;
+                position: relative;
+                border-right:1px solid #ccc;
+                border-bottom:1px solid #ccc;
+                >i{
+                    display:block;
+                    width: 13px;
+                    height: 13px;
+                    background: url("../css/img/spirit.fw.png") no-repeat -250px 0;
+                    position: absolute;
+                    right:9px;
+                    top:14px;
+                }
+            }
+            .default{
+                text-align:center;
+                padding:0;
+            }
+            .popularity{}
+            .num{}
+            .price{}
+            .marketable{
+                width: 516px;
+            }
+            .liebiao{
+                border-right:none;
+            }
+            .datu,.liebiao{
+                >i{
+                    width: 15px;
+                    height: 13px;
+                    background: url("../css/img/spirit.fw.png") no-repeat -275px 0;
+                    right:9px;
+                    top:14px; 
+                }
+            }
+            .right2_box{
+                padding-top:9px;
+                >p{
+                    float: left;
+                }
+                .prevPage{
+                    padding-left:66px;
+                }   
+                .prevPage{
+                    position: relative;
+                    i{
+                        display:block;
+                        width: 24px;
+                        height: 24px;
+                        background: url("../css/img/spirit.fw.png") no-repeat -300px 0;
+                        left:8px;
+                        top:-4px;
+                        position: absolute; 
+                    }
+                }
+                .nextPage{
+                    position: relative;
+                    i{
+                        display:block;
+                        width: 24px;
+                        height: 24px;
+                        left:36px;
+                        top:-4px;
+                        position: absolute; 
+                        background: url("../css/img/spirit.fw.png") no-repeat -330px 0;
+                    }
+                }
+            }
+        }
+        .fixed{
+            position:fixed;
+            top:0;
+            z-index:10;
+            width: 950px;
+            height: 43px;
+        }
+        .right3{
+            position: relative;
+            height: 2210px;
+            padding-left:10px;
+            .dataList{
+                >li{
+                    width: 190px;
+                    height: 358px;
+                    float: left;
+                    font-size:12px;
+                    color:#666;
+                    padding:10px 0 0 15px;
+                    border-bottom:1px solid #ccc;
+                    position: relative;
+                    >.imgBox{
+                        img{
+                            width: 170px;
+                            height: 170px;
+                            padding: 20px;
+                        }
+                    }
+                    .hot{
+                        display:block;
+                        width: 45px;
+                        height: 55px;
+                        background: url("../css/img/spirit.fw.png") no-repeat -350px -70px;
+                        left:4px;
+                        top:0px;
+                        position: absolute; 
+                    }
+                    >.title{
+                        height: 24px;
+                        line-height: 24px;
+                        margin-bottom:34px;
+                    }
+                    >.price{
+                        color:red;
+                        font-weight:bold;
+                        height: 20px;
+                    }
+                    .com{
+                        height: 32px;
+                        line-height: 32px;
+                        >.star{
+                            float: left;
+                            position: relative;
+                            width: 88px;
+                            height: 32px;
+                            display:inline-block;
+                            .stari{
+                                display:block;
+                                width: 17px;
+                                height: 32px;
+                                background: url("../css/img/spirit.fw.png") no-repeat 0 -161px;
+                                left:0px;
+                                float: left;
+                            }
+                            .starNum{
+                                background-position:-17px -160px;
+                            }
+                        }
+                        >.comment{
+                            padding-left:5px;
+                            float: left;
+                            display:inline-block;
+                        }
+                        >.comment:hover{
+                            text-decoration: underline;
+                            color: #0066FF;
+                        }
+                    }
+                    >.btn{
+                        >.buyBtn,>.addCar{
+                            float: left;
+                            padding:0 9px 0 9px ;
+                            height: 22px;
+                            line-height: 20px;
+                            color:#666;
+                            border:1px solid #ccc;
+                            border-radius:3px;
+                        }
+                        >.buyBtn{
+                            margin-right:6px;
+                        }
+                        >a:hover{
+                            text-decoration: underline;
+                            color: #0066FF;
+                        }
+                    }
+                } 
+            }
+            >a{
+                position: absolute;
+                bottom:-40px;
+                left:58px;
+                font-size:12px;
+                color:#3366CC;
+                >i{
+                    display:block;
+                    width: 25px;
+                    height: 25px;
+                    background: url("../css/img/spirit.fw.png") no-repeat -370px 0;
+                    left:-28px;
+                    top:-4px;
+                    position: absolute;
+                }
+            }
+            .page{
+                padding:24px 0 0 372px;
+                position: relative;
+                span{
+                    display:block;
+                    float: left;
+                    height: 41px;
+                    line-height: 41px;
+                    text-align:center;
+                    color:#666;
+                }
+                .ym{
+                    width: 41px; 
+                    border: 1px solid #ccc;
+                    padding:0 15px;
+                }
+                .prev,.next{
+                    border:1px solid #ccc;
+                    padding:0 24px;
+                }
+                .active{
+                    background:#EFEFEF;
+                    color:#999;
+                }
+                .pageNum{
+                    padding-left:3px;
+                }
+                .skip{
+                    width: 34px;
+                    height: 24px;
+                    position: absolute;
+                    left:700px;
+                    top:33px;
+                }
+                span:nth-child(7){
+                    position: absolute;
+                    left:737px;
+                    top:24px;
+                }
+                .confirm{
+                    width: 40px;
+                    height: 24px;
+                    line-height: 22px;
+                    border:1px solid #ccc;
+                    border-radius:2px;
+                    position: absolute;
+                    left:759px;
+                    top:32px;
+                }
+            }
+        }
+    }
+}
+
+.toTop{
+    position: fixed;
+    right:54px;
+    bottom:54px;
+    z-index:10;
+    font-size:12px;
+    width: 20px;
+    height: 70px;
+    background: #666;
+    color:#fff;
+    padding:20px 0 0 3px;
+    border-radius:3px;
+    opacity:0;
+    i{
+        display:block;
+        width: 17px;
+        height: 15px;
+        background: url("../css/img/spirit.fw.png") no-repeat 0 -132px ;
+        left:2px;
+        top:2px;
+        position: absolute; 
+    }
+}
+.toTop:hover{
+    background: #333;
 }
