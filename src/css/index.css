@@ -192,7 +192,7 @@
   position: relative;
 }
 
-.div3 .container .div3_div .div3_p, .div3 .container .div3_div a {
+.div3 .container .div3_div .div3_p, .div3 .container .div3_div a:nth-child(3) {
   display: inline-block;
   text-align: center;
   height: 24px;
@@ -202,7 +202,7 @@
   border-radius: 3px 0 0 3px;
 }
 
-.div3 .container .div3_div .div3_p > i, .div3 .container .div3_div a > i {
+.div3 .container .div3_div .div3_p > i, .div3 .container .div3_div a:nth-child(3) > i {
   display: block;
   width: 20px;
   height: 20px;
@@ -212,7 +212,7 @@
   position: absolute;
 }
 
-.div3 .container .div3_div .div3_p .div3_box, .div3 .container .div3_div a .div3_box {
+.div3 .container .div3_div .div3_p .div3_box, .div3 .container .div3_div a:nth-child(3) .div3_box {
   padding-top: 9px;
   width: 227px;
   position: absolute;
@@ -220,7 +220,7 @@
   z-index: 999;
 }
 
-.div3 .container .div3_div .div3_p .div3_box .p1_div3, .div3 .container .div3_div a .div3_box .p1_div3 {
+.div3 .container .div3_div .div3_p .div3_box .p1_div3, .div3 .container .div3_div a:nth-child(3) .div3_box .p1_div3 {
   height: 39px;
   background: #fff;
   font-size: 15px;
@@ -229,7 +229,7 @@
   color: #000;
 }
 
-.div3 .container .div3_div .div3_p .div3_box .p1_div3 > i, .div3 .container .div3_div a .div3_box .p1_div3 > i {
+.div3 .container .div3_div .div3_p .div3_box .p1_div3 > i, .div3 .container .div3_div a:nth-child(3) .div3_box .p1_div3 > i {
   display: block;
   width: 26px;
   height: 19px;
@@ -239,13 +239,13 @@
   position: absolute;
 }
 
-.div3 .container .div3_div .div3_p .div3_box .p2_div3, .div3 .container .div3_div a .div3_box .p2_div3 {
+.div3 .container .div3_div .div3_p .div3_box .p2_div3, .div3 .container .div3_div a:nth-child(3) .div3_box .p2_div3 {
   height: 139px;
   background: #DEDDF9;
   padding: 24px 0 0 24px;
 }
 
-.div3 .container .div3_div .div3_p .div3_box .p2_div3 > .a1_div3, .div3 .container .div3_div a .div3_box .p2_div3 > .a1_div3 {
+.div3 .container .div3_div .div3_p .div3_box .p2_div3 > .a1_div3, .div3 .container .div3_div a:nth-child(3) .div3_box .p2_div3 > .a1_div3 {
   display: inline-block;
   font-size: 12px;
   height: 12px;
@@ -254,16 +254,24 @@
   margin-bottom: 9px;
 }
 
-.div3 .container .div3_div .div3_p .div3_box .p2_div3 .s_span, .div3 .container .div3_div a .div3_box .p2_div3 .s_span {
+.div3 .container .div3_div .div3_p .div3_box .p2_div3 .s_span, .div3 .container .div3_div a:nth-child(3) .div3_box .p2_div3 .s_span {
   color: red;
 }
 
-.div3 .container .div3_div .div3_p .div3_box .p3_div3, .div3 .container .div3_div a .div3_box .p3_div3 {
+.div3 .container .div3_div .div3_p .div3_box .p3_div3, .div3 .container .div3_div a:nth-child(3) .div3_box .p3_div3 {
   height: 302px;
   background: url("../img/index_r2_c2.png") no-repeat 0 0;
 }
 
-.div3 .container .div3_div a {
+.div3 .container .div3_div a:nth-child(2) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 190px;
+  height: 24px;
+}
+
+.div3 .container .div3_div a:nth-child(3) {
   width: 68px;
   background: #FFDE00;
   margin-right: 20px;

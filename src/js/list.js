@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2018-01-04 16:53:29
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-01-06 14:15:13
+* @Last Modified time: 2018-01-07 17:33:59
 */
 require.config({
 
@@ -23,13 +23,13 @@ require(['jq'],function(){
     var qty = 30;
     var pageNum2;
 
-
     //生成li和页码
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function(){
         if(xhr.readyState===4 &&(xhr.status===200||xhr.status===304)){
             var data = JSON.parse(xhr.responseText).data;
             var total = JSON.parse(xhr.responseText).total;
+
             //生成li
             dataList.innerHTML = data.map(function(item){
 
@@ -48,8 +48,8 @@ require(['jq'],function(){
                                     <span class="comment">${item.comment}条评论</span>
                                 </div>
                                 <div class="btn">
-                                    <a href="#" class="buyBtn">快速购买</a>
-                                    <a href="#" class="addCar">加入购物车</a>
+                                    <a href="car.html" class="buyBtn a_buy">快速购买</a>
+                                    <a href="#" class="addCar a_buy" onclick="return false">加入购物车</a>
                                 </div>
                             </li>`;
 
@@ -71,8 +71,8 @@ require(['jq'],function(){
                                     <span class="comment">${item.comment}条评论</span>
                                 </div>
                                 <div class="btn">
-                                    <a href="#" class="buyBtn">快速购买</a>
-                                    <a href="#" class="addCar">加入购物车</a>
+                                    <a href="car.html" class="buyBtn a_buy">快速购买</a>
+                                    <a href="#" class="addCar a_buy" onclick="return false">加入购物车</a>
                                 </div>
                             </li>`;
                 }
@@ -118,7 +118,64 @@ require(['jq'],function(){
                 window.scrollTo(0,324);
                 xhr.open('get',`../api/goodsList.php?pageNo=${pageNo}&qty=${qty}`,true);
                 xhr.send(null);
-            }        
+            }   
+
+            //添加到购物车
+            var $dataList = $('.dataList');
+
+            $dataList.on('click','.a_buy',function(){
+                //id
+                var guid = $(this).closest('li').attr('data-guid');
+
+                //当前商品
+                var curGoods;
+                for(let i=0;i<data.length;i++){
+                    if(data[i].id==guid){
+                        curGoods = data[i];
+                        break;
+                    }
+                }
+                
+                var arrAll=[];
+                //存储cookie前先看本身有无cookie(一个类似取的过程)
+                //有则：cookie => arrAll[]
+                var cookies = document.cookie ;
+                if(cookies.length){
+                    cookies = cookies.split('; ');
+                    cookies.forEach(function(item){
+                        var arr = item.split('=');
+                        if(arr[0]==='list'){
+                            arrAll = JSON.parse(arr[1]);
+                        }
+                    })
+                }
+                func();
+
+                //函数：添加到购物车
+                function func(e){
+                    e = e || window.event ;
+                    var target = e.target || e.srcElement ; 
+
+                    //存cookie分两种情况：商品本身为0 =>1；1=>+1
+                    for(i=0;i<arrAll.length;i++){
+                        //商品为1 =>+1
+                        var idx = arrAll[i].id;
+                        if(idx==guid){
+                            arrAll[i].qty++;
+                            break;
+                        }
+                    }
+                    console.log(arrAll);
+                    //两值相等说明未走上边的if，也就是qty为1;
+                    if(i==arrAll.length){
+                        arrAll.push(curGoods);
+                    }
+
+                    var now = new Date();
+                    now.setDate(now.getDate()+100);
+                    document.cookie = 'list=' + JSON.stringify(arrAll) + ';expires=' + now.toUTCString()+';path=/';
+                }
+            })
 
         }
     }
@@ -160,7 +217,6 @@ require(['jq'],function(){
     }
 
     //点击商品切换到详情页:存储商品id
-    
     $('.dataList').on('click','.dataListLi',function(){
         var guid = $(this)[0].dataset.guid;
         //默认保存一周
@@ -169,6 +225,7 @@ require(['jq'],function(){
         document.cookie = 'guid=' + JSON.stringify(guid) + ';expires=' + now.toUTCString()+';path=/';
     })
 
+    
 
     //吸顶
     var right2 = document.querySelector('.main .right2');

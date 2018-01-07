@@ -204,6 +204,18 @@
   border-radius: 3px;
 }
 
+.div5 .div5_fr .buy .buy2 .buyBtn {
+  position: relative;
+}
+
+.div5 .div5_fr .buy .buy2 .buyBtn > a {
+  width: 148px;
+  height: 47px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 .div5 .div5_fr .buy .buy2 .addCar {
   background: #F77500;
   padding-left: 11px;

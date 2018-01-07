@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2018-01-04 16:53:29
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-01-06 14:58:21
+* @Last Modified time: 2018-01-07 16:32:56
 */
 require.config({
 
@@ -17,17 +17,32 @@ require.config({
 
 require(['jq','jqzoom'],function(){
 
-    //根据cookie传的id生成对应商品
+    //根据list传的id生成对应商品
     var cookies = document.cookie;
-    var guid = cookies.slice(6,9);
+    var len = cookies.length
+    var guid = cookies.slice(len-4,len-1);
+
+    //cookie为空时guid的默认值
+    if(guid=='') guid=001;
+    console.log(guid);
+
+    //默认值
+    if(cookies.length==10){
+        guid = cookies.slice(6,9);
+    }
+
+    //当前商品
+    var curGoods;
+
     $.ajax({
         url:'../api/data/goodsList.json',
         success:function(response){
             for(let i=0;i<response.length;i++){
                 if(response[i].id==guid){
-                    var curGoods = response[i];
+                    curGoods = response[i];
 
                     var div5_fr = document.querySelector('.div5 .div5_fr');
+                    div5_fr.innerHTML = '';
                     div5_fr.innerHTML = `<p class="title">${curGoods.title}</p>
                                         <p class="type">LCD-60TX85A</p>
                                         <p class="price">
@@ -67,7 +82,7 @@ require(['jq','jqzoom'],function(){
                                                 <span class="add btn">+</span>
                                             </div>
                                             <div class="buy2">
-                                                <button class="buyBtn">立即购买</button>
+                                                <button class="buyBtn">立即购买<a href="car.html"></a></button>
                                                 <button class="addCar">加入购物车<i></i></button>
                                                 <a href="">分期付款<i></i></a>
                                                 <a href="">加入收藏<i></i></a>
@@ -76,11 +91,62 @@ require(['jq','jqzoom'],function(){
                     break;
                 }
             }
+
+            //添加购物车模块
+            var addCar = document.querySelector('.div5 .addCar');
+            var buyBtn = document.querySelector('.div5 .buyBtn');
+
+            //商品id
+            console.log(guid,curGoods);
+
+            var arrAll=[];
+            //存储cookie前先看本身有无cookie(一个类似取的过程)
+            //有则：cookie => arrAll[]
+            var cookies = document.cookie ;
+            if(cookies.length){
+                cookies = cookies.split('; ');
+                cookies.forEach(function(item){
+                    var arr = item.split('=');
+                    if(arr[0]==='list'){
+                        arrAll = JSON.parse(arr[1]);
+                    }
+                })
+            }
+
+            //点击按钮后把数据存储到cookie
+            addCar.onclick = ()=>func();
+            buyBtn.onclick = ()=>func(); 
+
+            //函数：添加到购物车
+            function func(e){
+                e = e || window.event ;
+                var target = e.target || e.srcElement ; 
+
+                //存cookie分两种情况：商品本身为0 =>1；1=>+1
+                for(i=0;i<arrAll.length;i++){
+                    //商品为1 =>+1
+                    var idx = arrAll[i].id;
+                    if(idx==guid){
+                        arrAll[i].qty++;
+                        break;
+                    }
+                }
+                console.log(arrAll);
+                //两值相等说明未走上边的if，也就是qty为1;
+                if(i==arrAll.length){
+                    arrAll.push(curGoods);
+                }
+
+                var now = new Date();
+                now.setDate(now.getDate()+100);
+                document.cookie = 'list=' + JSON.stringify(arrAll) + ';expires=' + now.toUTCString()+';path=/';
+            }
+
         }
     })
 
+    //放大镜
     $(function() {
-        //放大镜实现js
         $(".jqzoom").jqueryzoom({
             xzoom: 300, //放大图的宽度(默认是 200)
             yzoom: 300, //放大图的高度(默认是 200)
@@ -97,5 +163,16 @@ require(['jq','jqzoom'],function(){
           $.noop();
         });
     });
+
+    //回到顶部
+    var $toTop = $('.toTop');
+    window.onscroll = function(){
+        scrollY>=100 ? $toTop.animate({opacity:1}) : $toTop.css({opacity:0});
+    }
+
+    $toTop.click(()=>{
+        scrollTo(0,0); 
+        $toTop.animate({opacity:0});
+    })
 
 })

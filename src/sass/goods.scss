@@ -172,6 +172,16 @@
                     border:1px solid #fff;
                     border-radius:3px;
                 }
+                .buyBtn{
+                    position: relative;
+                    >a{
+                        width: 148px;
+                        height: 47px;
+                        position: absolute;
+                        left: 0;
+                        top:0;
+                    }
+                }
                 .addCar{
                     background:#F77500;
                     padding-left:11px;

@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2018-01-02 19:48:34
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-01-04 14:00:56
+* @Last Modified time: 2018-01-07 16:08:46
 */
 
 // ÉèÖÃ±ðÃû
@@ -48,6 +48,17 @@ require(['jq','common'],function(){
         $('.page_span').eq(index).addClass('active')
             .siblings().removeClass('active');
     },3000);
+
+    //点击切换
+    var $div4 = $('.div4');    
+    $div4.on('click','.page_span',function(){
+        var idx = $(this).index();
+        
+        $(lis).eq(idx).fadeIn(600).siblings().fadeOut(400);
+
+        $('.page_span').eq(idx).addClass('active')
+            .siblings().removeClass('active');
+    })
 
     //tab
     $('.div8').on('click','.tab ul li',function(){
