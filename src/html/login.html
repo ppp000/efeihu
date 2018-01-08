@@ -12,7 +12,7 @@
         <div class="container clearfix">
             <div class="div1_l fl">
                 <span>您好，欢迎来到飞虎乐购！</span>
-                <a href="#">安全登录</a>
+                <a href="reg.html">安全登录</a>
                 <span>还没加入我们？</span>
                 <a href="#">免费注册</a>
             </div>
@@ -46,6 +46,7 @@
         <div class="container">
             <div class="img">
                 <img src="../img/login_logo.jpg" />
+                <a href="../index.html"></a>
             </div>
             <form action="#">
                 <div class="title">
@@ -58,27 +59,28 @@
                         <em>*</em>
                         号的为必填项。
                     </div>
-                    <div class="un">
-                        <label for="un" class="label">
+                    <div class="username">
+                        <label for="username" class="label">
                             <span>*</span>    
                             用户名：
                         </label>
-                        <input type="text" id="un" class="input"/>
+                        <input type="text" id="username" class="input username"/>
                         <div class="text_tips"></div>
                     </div>
-                    <div class="pw">
-                        <label for="un" class="label">
+                    <div class="password">
+                        <label for="password" class="label">
                             <span>*</span> 
                             密码：
                         </label>
-                        <input type="password" id="pw" class="input"/>
+                        <input type="password" id="password" class="input password"/>
+                        <div class="text_tips"></div>
                     </div>
                     <div class="un">
                         <label for="un" class="label">
                             <span>*</span>    
                             确认密码：
                         </label>
-                        <input type="password" id="un" class="input"/>
+                        <input type="password" id="confirm" class="input"/>
                         <div class="text_tips"></div>
                     </div>
                     <div class="un">
@@ -148,5 +150,6 @@
         </ul>
         <i></i>
     </div>
+    <script src="../js/require.js" data-main="../js/login"></script>
 </body>
 </html>

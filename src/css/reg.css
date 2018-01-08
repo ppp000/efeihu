@@ -16,6 +16,18 @@
   position: relative;
 }
 
+.main .container .img {
+  position: relative;
+}
+
+.main .container .img > a {
+  position: absolute;
+  width: 167px;
+  height: 95px;
+  left: 0px;
+  top: 0px;
+}
+
 .main .container form {
   width: 332px;
   height: 354px;
@@ -120,7 +132,7 @@
   font-size: 12px;
 }
 
-.main .container form .major .btn > p {
+.main .container form .major .btn > .reg {
   width: 140px;
   height: 40px;
   display: inline-block;
@@ -136,7 +148,7 @@
   background: linear-gradient(180deg, #fff, #eee);
 }
 
-.main .container form .major .btn > p i {
+.main .container form .major .btn > .reg i {
   display: block;
   width: 30px;
   height: 30px;
@@ -151,4 +163,20 @@
   text-decoration: underline;
   font-size: 14px;
   padding-left: 12px;
+}
+
+.active {
+  position: fixed;
+  width: 50%;
+  height: 50%;
+  opacity: 1;
+  background: #ccc;
+  left: 50%;
+  margin-left: -25%;
+  top: 50%;
+  margin-top: -25%;
+  font-size: 100px;
+  color: red;
+  line-height: 300px;
+  text-align: center;
 }

@@ -12,7 +12,16 @@
         margin:0 auto;
         background:url('../img/login_bg.jpg') no-repeat 0 top;
         position: relative;
-        .img{}
+        .img{
+            position: relative;
+            >a{
+                position: absolute;
+                width: 167px;
+                height: 95px;
+                left:0px;
+                top:0px;
+            }
+        }
         
         form{
             width: 332px;
@@ -100,7 +109,7 @@
                 }
                 .btn{
                     font-size:12px;
-                    >p{
+                    >.reg{
                         width: 140px;
                         height: 40px;
                         display:inline-block;
@@ -134,4 +143,20 @@
             }
         }
     }
+}
+
+.active{
+    position: fixed;
+    width:50%;
+    height: 50%;
+    opacity:1;
+    background: #ccc;
+    left:50%;
+    margin-left:-25%;
+    top:50%;
+    margin-top:-25%;
+    font-size:100px;
+    color:red;
+    line-height: 300px;
+    text-align:center;
 }

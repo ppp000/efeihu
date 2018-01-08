@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2018-01-04 16:53:29
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-01-07 16:32:56
+* @Last Modified time: 2018-01-08 16:59:26
 */
 require.config({
 
@@ -41,9 +41,35 @@ require(['jq','jqzoom'],function(){
                 if(response[i].id==guid){
                     curGoods = response[i];
 
-                    var div5_fr = document.querySelector('.div5 .div5_fr');
-                    div5_fr.innerHTML = '';
-                    div5_fr.innerHTML = `<p class="title">${curGoods.title}</p>
+                    //生成页面
+                    var container = document.querySelector('.div5 .container');
+                    container.innerHTML = '';
+                    container.innerHTML = 
+                        `<div class="div5_fl">
+                            <div class="t_container">
+                                <div class="jqzoom">
+                                <img src="${curGoods.minImg}" jqimg="${curGoods.bigImg}"/>
+                            </div>
+                            </div>
+                            <div class="b_container">
+                                <img src="${curGoods.bigImg}" />
+                                <img src="../img/commonBig.jpg" />
+                                <img src="${curGoods.bigImg}" />
+                                <img src="../img/commonBig.jpg" />
+                                <i class="prev"></i>
+                                <i class="next"></i>
+                            </div>    
+                            <div class="div5_b">
+                                <a href="">浏览更多图片</a>
+                                <p>分享到：</p>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+                        </div>
+                        <div class="div5_fr">
+                            <p class="title">${curGoods.title}</p>
                                         <p class="type">LCD-60TX85A</p>
                                         <p class="price">
                                             <span>飞虎价：</span>
@@ -87,7 +113,9 @@ require(['jq','jqzoom'],function(){
                                                 <a href="">分期付款<i></i></a>
                                                 <a href="">加入收藏<i></i></a>
                                             </div>
-                                        </div>`
+                                        </div>
+                        </div>
+                        `
                     break;
                 }
             }
@@ -145,13 +173,13 @@ require(['jq','jqzoom'],function(){
         }
     })
 
-    //放大镜
-    $(function() {
+    //放大镜:图片加载完再执行放大镜
+    var timer = setTimeout(function(){
         $(".jqzoom").jqueryzoom({
-            xzoom: 300, //放大图的宽度(默认是 200)
-            yzoom: 300, //放大图的高度(默认是 200)
-            offset: 5, //离原图的距离(默认是 10)
-            position: "right", //放大图的定位(默认是 "right")
+            xzoom: 300, //放大图的宽度
+            yzoom: 300, //放大图的高度
+            offset: 5, //离原图的距离
+            position: "right", //放大图的定位
             preload: 1
         });
 
@@ -162,7 +190,7 @@ require(['jq','jqzoom'],function(){
         },function(){
           $.noop();
         });
-    });
+    },20)
 
     //回到顶部
     var $toTop = $('.toTop');

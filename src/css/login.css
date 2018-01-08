@@ -16,6 +16,18 @@
   position: relative;
 }
 
+.main .container .img {
+  position: relative;
+}
+
+.main .container .img > a {
+  position: absolute;
+  width: 167px;
+  height: 95px;
+  left: 0px;
+  top: 0px;
+}
+
 .main .container form {
   width: 552px;
   height: 437px;
@@ -56,6 +68,7 @@
 
 .main .container form .major > div:not(.tips) {
   height: 32px;
+  position: relative;
 }
 
 .main .container form .major > div:not(.tips) .label {
@@ -84,6 +97,13 @@
   background: #ECF9DF;
   padding-left: 5px;
   color: #FF4C31;
+  width: 250px;
+  height: 16px;
+  font-size: 12px;
+  position: absolute;
+  left: 277px;
+  top: 4px;
+  display: none;
 }
 
 .main .container form .major .yzm {
@@ -94,7 +114,9 @@
 .main .container form .major .yzm .show_yzm {
   width: 63px;
   height: 20px;
-  background: #eee;
+  line-height: 20px;
+  text-align: center;
+  font-size: 16px;
 }
 
 .main .container form .major .yzm > a {
@@ -150,4 +172,26 @@
   left: 14px;
   top: 2px;
   position: absolute;
+}
+
+.main .container form .major .btn:hover > p {
+  font-weight: bold;
+  color: red;
+  border: 1px solid #ccc;
+}
+
+.active {
+  position: fixed;
+  width: 50%;
+  height: 50%;
+  opacity: 1;
+  background: #ccc;
+  left: 50%;
+  margin-left: -25%;
+  top: 50%;
+  margin-top: -25%;
+  font-size: 60px;
+  color: red;
+  line-height: 300px;
+  text-align: center;
 }
