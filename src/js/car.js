@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2018-01-04 16:53:29
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-01-07 17:55:02
+* @Last Modified time: 2018-01-08 17:38:04
 */
 require.config({
 
@@ -22,7 +22,7 @@ require(['jq'],function(){
     //把尾部guid=00x去掉
     var ck_len = cookies.length;
 
-    var status = [231,233,454,457,910];
+    var status = [231,233,297,299,576,454,457,910];
     if(!status.includes(ck_len)){
         cookies = cookies.slice(0,ck_len-10);
     }
