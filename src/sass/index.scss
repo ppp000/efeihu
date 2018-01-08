@@ -21,37 +21,48 @@
     .div1_r{
         @extend .div1_l;
         position: relative;
-        ul{
-            display:inline-block;
-            width: 77px;
+        >ul{
             position: relative;
-            li{
-                i{
+            >li{
+                width: 77px;
+                float: left;
+                >i{
                     display: block;
                     width: 13px;
                     height: 10px;
                     background: url("../css/img/spirit.fw.png") no-repeat 0 0;
-                    left:70px;
+                    left:64px;
+                    top:10px;
+                    position: absolute; 
+                }
+                >ul{
+                    display:none;
+                }
+            }
+            .div1_li1:hover{
+                background: #fff;
+                .div1_ul1{
+                    display:block;
+                }
+            }
+            .div1_li2:hover{
+                background: #fff;
+                .div1_ul2{
+                    display:block;
+                }
+            }
+            >li:last-child{
+                width: 106px;
+                i{
+                    display:block;
+                    width: 13px;
+                    height: 10px;
+                    background: url("../css/img/spirit.fw.png") no-repeat -13px 0;
+                    left:228px;
                     top:10px;
                     position: absolute; 
                 }
             }
-        }
-        span{
-            display:inline-block;
-            width: 77px;
-        }
-        span:nth-child(4){
-            width: 96px;
-        }
-        i{
-            display:block;
-            width: 13px;
-            height: 10px;
-            background: url("../css/img/spirit.fw.png") no-repeat -13px 0;
-            left:257px;
-            top:10px;
-            position: absolute; 
         }
     }
 }
@@ -215,7 +226,14 @@
                     }
                 }
             }
-            a{
+            a:nth-child(2){
+                position: absolute;
+                left:0;
+                top:0;
+                width: 190px;
+                height: 24px;
+            }
+            a:nth-child(3){
                 @extend .div3_p;
                 width: 68px;
                 background: #FFDE00;
@@ -325,7 +343,9 @@
     @extend .div6;
     background: #e21d24;
     height: 520px;
-    position: relative;
+    .container{
+        position: relative;
+    }
     .tab{
         width: 100%;
         position: absolute;
@@ -334,8 +354,33 @@
         >ul{
             width: 110%;
             overflow: hidden;
+            width: 116px;
             >li{
                 background: #cc0033;
+                width: 116px;
+                height: 61px;
+                color:#fff;
+                text-align:center;
+                line-height: 61px;
+                font-size:14px;
+                border-radius:12px 0 0 12px;
+            }
+            >li:nth-of-type(even){
+                background:#22AC38;
+            }
+            li.active1{
+                background:#ff0066;
+                color:#ff0;
+            }
+            li.active2{
+                background: #6c3;
+                color:#ff0;
+            }
+        }
+        >ul:nth-child(2){
+            padding-top:35px;
+            li{
+                border-radius:0 12px 12px 0;
             }
         }
     }
@@ -345,5 +390,315 @@
         background: url(../img/ms_bg.png) no-repeat;
         height: 520px;
         overflow: hidden;
+        position: relative;
+        >div{
+            display:none;
+            margin:0 auto;
+            position: absolute;
+            left:50%;
+            margin-left:-462px;
+            top:0
+        }
+        >div:nth-child(1){
+            display:block;
+        }
+        >div.ulBox{
+            width: 100%;
+            ul{
+                width: 924px;
+                height: 496px;
+                overflow: hidden;
+                background:url('../img/ms1_bg.png');
+                li{
+                    width: 280px;
+                    background: #fff;
+                    height: 380px;
+                    position: relative;
+                    float: left;
+                    margin: 55px -7px 45px 25px;
+                    span{
+                        display:block;
+                        color:#fff;
+                        float: left;
+                        height: 56px;
+                    }
+                    .title{
+                        font-size:14px;
+                        padding:3px 10px;
+                        color:#000;
+                    }
+                    div{
+                        background:#666666;
+                        height: 56px;
+                        position: relative;
+                        .miao{
+                            margin-left:10px;
+                            padding-top:8px;
+                            width: 28px;
+                            font-size:14px;
+                        }
+                        .price{
+                            font-size:24px;
+                            line-height: 66px;
+                        }
+                        .sale{
+                            padding-top:34px;
+                            text-align:center;
+                            line-height: 3px;
+                            position: absolute;
+                            left:135px;
+                        }
+                        >i{
+                            display:block;
+                            width: 75px;
+                            height: 56px;
+                            background: url("../css/img/spirit.fw.png") no-repeat 0 -70px;
+                            right:0;
+                            top:0px;
+                            position: absolute;
+                        }
+                    }
+                }
+            }
+        }
     }
+}
+
+.div9{
+    min-width:1200px;
+    position: relative;
+    height: 362px;
+    background: url('../img/title_03.jpg') center top;
+}
+
+.div10{
+    min-width:1200px;
+    position: relative;
+    height: 720px;
+    background: url('../img/bg_03.jpg') center top;
+    .container{
+        width: 1191px;
+        margin:0 auto;
+    }
+    .div10_3col{
+        height: 227px;
+        .div10_box{
+            width: 391px;
+            height: 227px;
+            position: relative;
+            overflow: hidden;
+            float: left;
+            margin-right:9px;
+            img{
+                width: 391px;
+                height: 227px;
+            }
+            a{
+                width: 391px;
+                height: 227px;
+                font-size:62px;
+                color:#fff;
+                text-align:center;
+                height: 227px;
+                line-height: 227px;
+                position: absolute;
+                background: #000;
+                opacity:0.5;
+            }
+        }
+        .special_box{
+            margin: 0;
+        }
+    }
+    .div10_4col{
+        height: 468px;
+        a{
+            width: 291px;
+            height: 226px;
+            float: left;
+            margin:9px 9px 0 0;
+        }
+        a:nth-child(4),a:nth-child(8){
+            margin-right:0;
+        }
+
+    }
+}
+
+.div11{
+    text-align: center;
+    min-width:1200px;
+    background: #669A01 url('../img/title_05.jpg') no-repeat center top;
+    height: 112px;
+}
+
+.div12{
+    background: #669A01;
+    min-width:1200px;
+    overflow: hidden;
+    // height: 662px;
+    padding-bottom:20px;
+    position: relative;
+    .container{
+        background: #0099ff;
+        height: 662px;
+        border-radius:8px;
+    }
+    ul{
+        float: left;
+        margin-top:17px;
+        height: 662px;
+        // width: 947px;
+        >li:first-child{
+            height: 618px;
+            background: #fff url('../img/pt_bi_07.jpg') no-repeat center top;
+            margin:0 12px 0 19px;
+            overflow: hidden;
+        }
+        >li{
+            width: 225px;
+            height: 304px;
+            float: left;
+            margin:0 9px 9px 0;
+            background: #fff;
+            position: relative;
+            img{
+                margin-bottom:3px;
+            }
+            .title{
+                font-size:12px;
+                color:#000;
+                padding-left:11px;
+                margin-bottom:22px;
+            }
+            .sale{
+                font-size:18px;
+                color:red;
+                padding-left:11px;
+                display:inline-block;
+                margin-right:28px;
+                font-weight:bold;
+            }
+            .price{
+                font-size:12px;
+                color:#ccc;
+                text-align:center;
+                display:inline-block;
+            }
+            i{
+                display:block;
+                width: 50px;
+                height: 50px;
+                background: url("../css/img/spirit.fw.png") no-repeat -90px -70px;
+                right:15px;
+                bottom:5px;
+                position: absolute;
+            }
+        }
+    }
+}
+
+.div13{
+    height: 271px;
+    width: 981px;
+    background: #fff;
+    padding-top:101px;
+    margin:0 auto;
+    .div13_ul1{
+        padding-top:10px;
+        float: left;
+        width: 273px;
+        height: 149px;
+        li{
+            font-size:12px;
+            color:#999;
+        }
+        li:nth-child(1),li:nth-child(2){
+            padding-left:27px;
+            height: 34px;
+            line-height: 34px;
+            span{
+                font-size:14px;
+                color:#333;
+            }
+        }
+        li:nth-child(3),li:nth-child(4){
+            padding-left:102px;
+            height: 48px;
+            line-height: 48px;
+            span{
+                color:#FF6600;
+            }
+        }
+        li:nth-child(4){
+            line-height:6px; 
+        }
+    }
+    .div14_ul2{
+        float: left;
+        height: 149px;
+        width: 140px;
+        padding-left:16px;
+        border-left:1px solid #ccc;
+        li{
+            font-size:12px;
+            color:#ccc;
+            height: 20px;
+            line-height: 20px;
+        }
+        li:first-child{
+            font-size:14px;
+            color:#333;
+            margin-bottom:5px;
+        }
+    }
+}
+
+.div14{
+    @extend .div13;
+    height: 129px;
+    padding-top:19px;
+    position: relative;
+    li{
+        font-size:12px;
+        height: 24px;
+        line-height: 24px;
+        color:#ccc;
+        .div14_span{
+            padding-right:5px;
+            height: 13px;
+            line-height: 13px;
+            display:inline-block;
+            border-right:1px solid #ccc;
+        }
+    }
+    li:first-child{
+        color:#333;
+        span{
+            width: 69px;
+            display:inline-block;
+        }
+    }
+    i{
+        display:block;
+        width: 50px;
+        height: 55px;
+        background: url("../css/img/spirit.fw.png") no-repeat -150px -70px;
+        right:0;
+        bottom:40px;
+        position: absolute;
+    }
+}
+
+.div15{
+    min-width:1200px;
+    // height: 200px;
+    background: #fff url('../img/side.png') no-repeat center top;
+}
+.fixed{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:77;
 }

@@ -1,0 +1,175 @@
+.div1 .container{
+    width: 984px;
+}
+
+.main{
+    width: 100%;
+    height: 465px;
+    background: linear-gradient(180deg,#D0EDFF, #fff);
+    .container{
+        width: 950px;
+        height: 460px;
+        margin:0 auto;
+        background:url('../img/login_bg.jpg') no-repeat 0 top;
+        position: relative;
+        .img{
+            position: relative;
+            >a{
+                position: absolute;
+                width: 167px;
+                height: 95px;
+                left:0px;
+                top:0px;
+            }
+        }
+        
+        form{
+            width: 552px;
+            height: 437px;
+            border: 2px solid #EEDFBB;
+            background: #fff;
+            position: absolute;
+            right: -16px;
+            top: 30px;
+            bottom: 64px;
+            .title{
+                height: 31px;
+                line-height: 31px;
+                background: linear-gradient(180deg,#fff,#eee);
+                h2{
+                    padding-left: 10px;
+                    font: bold 14px/31px Verdana, Geneva, sans-serif;
+                }
+            }
+            .major{
+                height: 402px;
+                border: 1px solid #C7012C;
+                padding: 10px;
+                .tips{
+                    font-size:12px;
+                    margin-bottom: 5px;
+                    color:#f00;
+                    b{
+                        color:#999;
+                    }
+                }
+                // 用户名、密码等
+                >div:not(.tips){
+                    height: 32px;
+                    position: relative;
+                    .label{
+                        display:inline-block;
+                        width: 85px;
+                        text-align:center;
+                        font-size:12px;
+                        text-align:right;
+                        color:#555; 
+                        span{
+                            color: #C6002C;
+                            margin: 5px;
+                        }
+                    }
+                    .input{
+                        width: 182px;
+                        height: 24px;
+                        border: solid 1px #cccccc;
+                        line-height: 22px;
+                        padding: 0 5px;
+                    }
+                    .text_tips{
+                        background: #ECF9DF;
+                        padding-left: 5px;
+                        color: #FF4C31;
+                        width: 250px;
+                        height: 16px;
+                        font-size:12px;
+                        position: absolute;
+                        left:277px;
+                        top:4px;
+                        display:none;
+                    }
+                }
+                .yzm{
+                    padding-left:90px;
+                    height: 20px !important;
+                    .show_yzm{
+                        width: 63px;
+                        height: 20px;
+                        line-height: 20px;
+                        text-align:center;
+                        font-size:16px;
+                    }
+                    >a{
+                        font-size:12px;
+                        padding-left:6px;
+                        text-decoration:underline;
+                    }
+                }
+                .agreement{
+                    padding-left:90px;
+                    height: 34px !important;
+                    line-height: 34px;
+                    font-size:12px;
+                    >input{
+                        margin-top:10px;
+                    }
+                    input,p{
+                        margin-right:5px;
+                    }
+                    a{
+                        text-decoration:underline;
+                    }
+                }
+                .btn{
+                    font-size:12px;
+                    >p{
+                        width: 140px;
+                        height: 40px;
+                        display:inline-block;
+                        color:#4171FC;
+                        line-height: 40px;
+                        margin-left:80px;
+                        font-size:16px;
+                        font-weight:bold;
+                        border:1px solid #ccc;
+                        padding-left:50px;
+                        position: relative;
+                        border-radius:3px;
+                        background: linear-gradient(180deg, #fff,#eee);
+                        i{
+                            display:block;
+                            width: 30px;
+                            height: 30px;
+                            background: url("../css/img/spirit.fw.png") no-repeat -310px -25px;
+                            left:14px;
+                            top:2px;
+                            position: absolute;
+                        }
+                    }
+                    
+                }
+                .btn:hover>p{
+                    font-weight:bold;
+                    color:red;
+                    border:1px solid #ccc;
+                }
+            }
+        }
+    }
+}
+
+.active{
+    position: fixed;
+    width:50%;
+    height: 50%;
+    opacity:1;
+    background: #ccc;
+    left:50%;
+    margin-left:-25%;
+    top:50%;
+    margin-top:-25%;
+    font-size:60px;
+    color:red;
+    line-height: 300px;
+    text-align:center;
+}

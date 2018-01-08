@@ -1,0 +1,216 @@
+.div4{
+    min-width:1200px;
+    height: 41px;
+    padding-top:20px;
+    font-size:12px;
+    .container{
+        border-bottom:1px solid #ccc;
+        height: 21px;
+        a,span{
+            display:inline-block;
+            padding-left:11px;
+            color:#666666;
+        }
+        span:last-child{
+            color:#999;
+        }
+    }
+}
+
+.div5{
+    height: 453px;
+    min-width:1200px;
+    background: #fff;
+    .container{}
+    .div5_fr{
+        width: 898px;
+        height: 414px;
+        float: right;
+        position: relative;
+        padding:15px 0 0 25px;
+        font-size:12px;
+        color:#666;
+        position: relative;
+        p{
+            span{
+                display:inline-block;
+                height: 12px;
+            }
+        }
+        .title{
+            font-size:16px;
+            color:#000;
+            display:block;
+            height: 31px;
+            line-height: 31px;
+        }
+        .type{
+            font-size:14px;
+            color:#333;
+            height: 29px;
+            line-height: 18px;
+            border-bottom:1px dashed #ccc;
+        }
+        .price{
+            height: 45px;
+            line-height: 45px;
+            position: relative;
+            span:nth-child(1){
+            }
+            span:nth-child(2){
+                color:#C7012C;
+            }
+            span:nth-child(3){
+                font-size:22px;
+                color:#C7012C;
+                line-height: 46px;
+                font-weight:bold;
+            }
+            .goodsId{
+                position: absolute;
+                right:0px;
+                top:0px;
+            }
+        }
+        .div5_p1{
+            height: 31px;
+            margin-bottom:18px;
+            border-bottom:1px dashed #ccc;
+            a{
+                color:blue;
+            }
+        }
+        .div5_p2{
+            height: 20px;
+            span:nth-child(2){
+                color:#C7012C;
+            }
+        }
+        .div5_p3{
+            height: 25px;
+            line-height: 25px;
+        }
+        .div5_p4{
+            height: 37px;
+            line-height: 37px;
+            a{
+                color:#C7012C;
+                display:inline-block;
+            }
+            span{
+                display:inline-block;
+            }
+        }
+        .div5_p5{
+            height: 37px;
+            line-height: 33px;
+            position: relative;
+            a{
+                color:blue;
+                display:inline-block;
+                padding-left:94px;
+            }
+            i{
+                display:inline-block;
+                width: 87px;
+                height: 29px;
+                background:url("../css/img/spirit.fw.png") no-repeat -470px 0;
+                left:62px;
+                top:0px;
+                position: absolute; 
+            }
+            span{
+                display:inline-block;
+            }
+        }
+        .buy{
+            background:#F8F8F8;
+            position: absolute;
+            width: 885px;
+            height: 117px;
+            padding:16px 0 0 16px;
+            left:13px;
+            .buy1{
+                height: 35px;
+                position: relative;
+                .buy_span{
+                    color:#333;
+                    display:inline-block;
+                }
+                input{
+                    width: 40px;
+                    height: 18px;
+                    border:1px solid #ccc;
+                    position: absolute;
+                    top:0px;
+                    left:70px;
+                    text-align:center;
+                }
+                .btn,input{
+                    display:inline-block;
+                    border-radius:2px;
+                }
+                .btn{
+                    height: 18px;
+                    width: 18px;
+                    background:#EFEFEF;
+                    border:1px solid #ccc;
+                    padding-left:4px;
+                }
+                .add{
+                    margin-left:37px;
+                }
+            }
+            .buy2{
+                position: relative;
+                button{
+                    width: 148px;
+                    height: 47px;
+                    color:#fff;
+                    font-size:18px;
+                    background:#C31313;
+                    border:1px solid #fff;
+                    border-radius:3px;
+                }
+                .buyBtn{
+                    position: relative;
+                    >a{
+                        width: 148px;
+                        height: 47px;
+                        position: absolute;
+                        left: 0;
+                        top:0;
+                    }
+                }
+                .addCar{
+                    background:#F77500;
+                    padding-left:11px;
+                }
+                a{
+                    display:inline-block;
+                    padding-left:61px;
+                    padding-top:16px;
+                    i{
+                        display:inline-block;
+                        width: 39px;
+                        height: 33px;
+                        background:url("../css/img/spirit.fw.png") no-repeat -350px -25px;
+                        left:317px;
+                        top:4px;
+                        position: absolute; 
+                    }
+                }
+                a:nth-of-type(2){
+                    padding-left:38px;
+                    i{
+                        width: 24px;
+                        height: 33px;
+                        background-position:-396px -25px;
+                        left:426px;
+                        top:4px;
+                    }
+                }
+            }
+        }
+    }
+}
